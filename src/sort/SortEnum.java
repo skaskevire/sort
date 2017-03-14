@@ -2,7 +2,9 @@ package sort;
 
 public enum SortEnum {
 	BUBBLE(new BubbleSort()),
-	CHOICE(new ChoiceSort());
+	CHOICE(new ChoiceSort()),
+	INSERTION(new InsertionSort()),
+	QUICK(new QuickSort());
 	private Sort sortAlgoritm;
 	SortEnum(Sort sortAlgoritm)
 	{

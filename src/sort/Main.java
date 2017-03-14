@@ -1,30 +1,21 @@
 package sort;
 
+import java.util.Arrays;
 import java.util.Random;
 
 public class Main {
+	
+	private static final boolean DEBUG_ENABLED = false;
+	
 	public static void main(String[] args) {
-		System.out.println("----------------------");
 		int[] arrayToSort = generateArrayToSort(9999);
-		SortEnum[] sortAlgoritms = SortEnum.values();
-		for (int i = 0; i < sortAlgoritms.length; i++) {
-			long startTime =System.nanoTime();
-			int[] resultingArray = sortAlgoritms[i].getSortAlgoritm().sort(arrayToSort);
-			long endTime =  System.nanoTime();
-
-			System.out.println(sortAlgoritms[i].getSortAlgoritm().getClass());
-			System.out.println("Time elapsed: " + (endTime - startTime));
-			for (int j = 0; j < resultingArray.length; j++) {
-				System.out.print(resultingArray[j] + " ");
-			}
-			System.out.println("");
-			System.out.println("----------------------");
-		}
+		//int[] arrayToSort = {1,1,3,8 ,7, 4, 1, 1, 3 };
+		
+		
+		sortArray(arrayToSort, DEBUG_ENABLED);
 	}
 	
-	
-	
-	public static int[] generateArrayToSort(int size)
+	private static int[] generateArrayToSort(int size)
 	{
 		int [] array = new int[size];
 		
@@ -34,4 +25,59 @@ public class Main {
 		
 		return array;
 	}
+	
+	private static void sortArray(int[] arrayToSort, boolean debugEnabled)
+	{		
+			if(debugEnabled)
+			{
+				printNotSortedArray(arrayToSort);
+			}
+		
+			SortEnum[] sortAlgoritms = SortEnum.values();
+			for (int i = 0; i < sortAlgoritms.length; i++) {
+				
+				int[] arrayToSortLocal = Arrays.copyOf(arrayToSort, arrayToSort.length);
+				long startTime =System.nanoTime();
+				int[] resultingArray = sortAlgoritms[i].getSortAlgoritm().sort(arrayToSortLocal);
+				long endTime =  System.nanoTime();
+
+				printResultsOfSorting(sortAlgoritms[i].getSortAlgoritm().getClass().toString(),
+						startTime,
+						endTime,
+						resultingArray,
+						debugEnabled);
+			}
+	}
+	
+	private static void printNotSortedArray(int[] arrayToSort)
+	{
+		for (int j = 0; j < arrayToSort.length; j++) {
+			System.out.print(arrayToSort[j] + " ");
+		}
+
+		System.out.println("");
+		System.out.println("----------------------");
+		System.out.println("----------------------");
+	}
+	
+	private static void printResultsOfSorting(String algoritmName, long startTime, long endTime, int[] resultingArray, boolean debugEnabled)
+	{
+		System.out.println(algoritmName);
+		System.out.println("Time elapsed: " + (endTime - startTime));
+		
+		if(debugEnabled)
+		{
+			printSortedArray(resultingArray);
+		}
+
+		System.out.println("");
+		System.out.println("----------------------");
+	}
+	
+	private static void printSortedArray(int[] array)
+	{
+		for (int j = 0; j < array.length; j++) {
+			System.out.print(array[j] + " ");
+		}
+	}	
 }

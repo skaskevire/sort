@@ -8,8 +8,8 @@ public class Main {
 	private static final boolean DEBUG_ENABLED = false;
 	
 	public static void main(String[] args) {
-		int[] arrayToSort = generateArrayToSort(10000);
-		//int[] arrayToSort = {131,2,7,2,1,4,9,6 };
+		//int[] arrayToSort = generateArrayToSort(100000);
+		int[] arrayToSort = {0,1,2,3,4,5,6,7,8 };
 		
 		
 		sortArray(arrayToSort, DEBUG_ENABLED);

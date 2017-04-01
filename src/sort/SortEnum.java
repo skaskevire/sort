@@ -4,6 +4,7 @@ public enum SortEnum {
 	BUBBLE(new BubbleSort()),
 	CHOICE(new ChoiceSort()),
 	INSERTION(new InsertionSort()),
+	SHELL(new ShellSort()),
 	QUICK(new QuickSort()),
 	MERGE(new MergeSort());
 	private Sort sortAlgoritm;

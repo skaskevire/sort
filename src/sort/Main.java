@@ -8,7 +8,7 @@ public class Main {
 	private static final boolean DEBUG_ENABLED = false;
 	
 	public static void main(String[] args) {
-		int[] arrayToSort = generateArrayToSort(99);
+		int[] arrayToSort = generateArrayToSort(10900);
 		//int[] arrayToSort = {131,2,7,2,1,4,9,6 };
 		
 		

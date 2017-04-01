@@ -7,7 +7,12 @@ public enum SortEnum {
 	SHELL(new ShellSort()),
 	QUICK(new QuickSort()),
 	MERGE(new MergeSort()),
-	JAVA_DOUBLE_PIVOT_QUICK(new GodfatherJavaDoublePivotQuickSort());
+	
+	JAVA_DOUBLE_PIVOT_QUICK(new GodfatherJavaDoublePivotQuickSort()),
+	
+	ARUN_SINGLE_PIVOT(new ArunSinglePivotQuickSort()),
+	ARUN_THREE_WAY(new ArunThreeWaySort()),
+	ARUN_DOUBLE_PIVOT_QUICK_SORT(new ArunDoublePivotQuickSort());
 	private Sort sortAlgoritm;
 	SortEnum(Sort sortAlgoritm)
 	{

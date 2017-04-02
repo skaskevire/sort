@@ -7,6 +7,7 @@ public enum SortEnum {
 	SHELL(new ShellSort()),
 	QUICK(new QuickSort()),
 	MERGE(new MergeSort()),
+	HEAP(new HeapSort()),
 	
 	JAVA_DOUBLE_PIVOT_QUICK(new GodfatherJavaDoublePivotQuickSort()),
 	

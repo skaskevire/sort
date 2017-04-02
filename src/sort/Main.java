@@ -5,10 +5,10 @@ import java.util.Random;
 
 public class Main {
 	
-	private static final boolean DEBUG_ENABLED = false;
+	private static final boolean DEBUG_ENABLED = true;
 	
 	public static void main(String[] args) {
-		int[] arrayToSort = generateArrayToSort(100000);
+		int[] arrayToSort = generateArrayToSort(100);
 		//int[] arrayToSort = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,2,3,4,5,6,7,8 };
 		
 		

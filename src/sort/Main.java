@@ -5,7 +5,7 @@ import java.util.Random;
 
 public class Main {
 	
-	private static final boolean DEBUG_ENABLED = true;
+	private static final boolean DEBUG_ENABLED = false;
 	
 	public static void main(String[] args) {
 		int[] arrayToSort = generateArrayToSort(100);

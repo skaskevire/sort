@@ -9,7 +9,9 @@ public class HeapSort implements Sort{
 		{
 			int temp = array[k];
 			array[k] = array[k/2];
-			array[k/2] = temp;			
+			array[k/2] = temp;
+			
+			k = k / 2;
 		}
 	}
 	
